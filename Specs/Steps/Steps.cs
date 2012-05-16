@@ -1,5 +1,6 @@
 ﻿using System;
 using Specs.Automation;
+using Specs.Automation.PageWrappers;
 using TechTalk.SpecFlow;
 
 namespace Specs.Steps

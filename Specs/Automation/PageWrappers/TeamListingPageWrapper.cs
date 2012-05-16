@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Specs.Automation
+﻿namespace Specs.Automation.PageWrappers
 {
     public class TeamListingPageWrapper : PageWrapperBase
     {

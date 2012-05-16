@@ -1,4 +1,3 @@
 SpecFlowAndFluentAutomation
 ===========================
-
-SpecFlow, FluentAutomation, Simple.Data, Page Objects - a little demo
+This is a small demo on how to use SpecFlow with the page object pattern and automate web pages with FluentAutomator.

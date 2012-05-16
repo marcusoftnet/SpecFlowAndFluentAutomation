@@ -18,7 +18,13 @@ namespace Specs
         [TestFixtureSetUp]
         public void TestSetUp()
         {
-            I.Use(BrowserType.InternetExplorer);
+            I.Use(BrowserType.Firefox);
+        }
+
+        [Test]
+        public void Test()
+        {
+            I.Open("http://www.google.com/");
         }
 
         [Test]

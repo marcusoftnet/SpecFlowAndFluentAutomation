@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Specs.Automation
+namespace Specs.Automation.PageWrappers
 {
     public class CreateTeamPageWrapper : PageWrapperBase
     {

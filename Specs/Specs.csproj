@@ -81,9 +81,9 @@
   <ItemGroup>
     <Compile Include="Automation\Browser.cs" />
     <Compile Include="Automation\FluentExtensions.cs" />
-    <Compile Include="Automation\PageWrapperBase.cs" />
-    <Compile Include="Automation\TeamListingPageWrapper.cs" />
-    <Compile Include="Automation\CreateTeamPageWrapper.cs" />
+    <Compile Include="Automation\PageWrappers\CreateTeamPageWrapper.cs" />
+    <Compile Include="Automation\PageWrappers\PageWrapperBase.cs" />
+    <Compile Include="Automation\PageWrappers\TeamListingPageWrapper.cs" />
     <Compile Include="Automation\DBWrapper.cs" />
     <Compile Include="ExampleTestClass.cs" />
     <Compile Include="Features\SimpleFeature.feature.cs">
@@ -92,7 +92,6 @@
       <DependentUpon>SimpleFeature.feature</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Steps\EventDefinition1.cs" />
     <Compile Include="Steps\SpecFlowEvents.cs" />
     <Compile Include="Steps\Steps.cs" />
   </ItemGroup>
@@ -104,6 +103,7 @@
     </None>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>xcopy $(SolutionDir)chromedriver.exe $(TargetDir) /D</PostBuildEvent>

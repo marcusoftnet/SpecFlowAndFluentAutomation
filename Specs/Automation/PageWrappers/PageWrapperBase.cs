@@ -3,7 +3,7 @@ using System.Configuration;
 using FluentAutomation.API;
 using FluentAutomation.API.Enumerations;
 
-namespace Specs.Automation
+namespace Specs.Automation.PageWrappers
 {
     public class PageWrapperBase
     {
@@ -28,7 +28,7 @@ namespace Specs.Automation
                 if (_instance == null)
                 {
                     _instance = new BrowserAutomation();
-                    _instance.I.Use(BrowserType.Firefox);
+                    _instance.I.Use(BrowserType.Chrome);
                 }
                 return _instance.I;
             }

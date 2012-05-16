@@ -7,12 +7,21 @@ namespace Specs.Automation
 {
     public class DBWrapper
     {
-        private const string DatabasePath = @"c:\Dev\WebAutomationWithSpecFlow\Web\App_Data\Teams.sdf";
-        private static dynamic db = Database.Opener.OpenFile(DatabasePath);
+        private static dynamic DB
+        {
+            get
+            {
+                var currentDir = new DirectoryInfo(Path.GetDirectoryName(Assembly.GetExecutingAssembly().CodeBase.Substring(8)));
+                var solutionDir = currentDir.Parent.Parent.Parent;
+                var dbPath = solutionDir.FullName + @"\Web\App_Data\Teams.sdf";
+
+                return Database.Opener.OpenFile(dbPath);
+            }
+        }
         
         public static void RemoveAllTeamsFromDatabase()
         {
-            db.Teams.DeleteAll();
+            DB.Teams.DeleteAll();
         }
 
         public static void EmptyAllTestData()
@@ -22,7 +31,7 @@ namespace Specs.Automation
 
         public static void AddTeamToDatabase(string lagNamn)
         {
-            db.Teams.Insert(Name: lagNamn, City: "Stockholm", Founded: DateTime.Now);
+            DB.Teams.Insert(Name: lagNamn, City: "Stockholm", Founded: DateTime.Now);
         }
     }
 }
