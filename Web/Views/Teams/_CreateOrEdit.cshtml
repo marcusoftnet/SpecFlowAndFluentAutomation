@@ -1,0 +1,28 @@
+@model Web.Models.Team
+
+@* This partial view defines form fields that will appear when creating and editing entities *@
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.Name)
+</div>
+<div class="editor-field">
+    @Html.EditorFor(model => model.Name)
+    @Html.ValidationMessageFor(model => model.Name)
+</div>
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.City)
+</div>
+<div class="editor-field">
+    @Html.EditorFor(model => model.City)
+    @Html.ValidationMessageFor(model => model.City)
+</div>
+
+<div class="editor-label">
+    @Html.LabelFor(model => model.Founded)
+</div>
+<div class="editor-field">
+    @Html.EditorFor(model => model.Founded)
+    @Html.ValidationMessageFor(model => model.Founded)
+</div>
+

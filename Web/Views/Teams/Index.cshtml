@@ -1,0 +1,47 @@
+@model IEnumerable<Web.Models.Team>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create", null, new { Id = "NewLink" })
+</p>
+<table>
+    <tr>
+        <th></th>
+        <th>
+            Name
+        </th>
+        <th>
+            City
+        </th>
+        <th>
+            Founded
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.TeamId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.TeamId }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.TeamId }, new { id = "Delete" + item.Name.Replace(" ", "_") })
+        </td>
+        <td>
+			<div id="TeamName">@item.Name</div>
+        </td>
+        <td>
+			@item.City
+        </td>
+        <td>
+			@String.Format("{0:g}", item.Founded)
+        </td>
+    </tr>
+}
+
+</table>
+
+
