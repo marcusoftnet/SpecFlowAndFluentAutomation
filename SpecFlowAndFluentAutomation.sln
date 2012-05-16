@@ -8,6 +8,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{36EA4F5C-A089-4E0E-A5FB-33852CA99679}"
 	ProjectSection(SolutionItems) = preProject
 		chromedriver.exe = chromedriver.exe
+		README.md = README.md
 	EndProjectSection
 EndProject
 Global
