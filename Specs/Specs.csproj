@@ -80,7 +80,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Automation\Browser.cs" />
-    <Compile Include="Automation\FluentExtensions.cs" />
     <Compile Include="Automation\PageWrappers\CreateTeamPageWrapper.cs" />
     <Compile Include="Automation\PageWrappers\PageWrapperBase.cs" />
     <Compile Include="Automation\PageWrappers\TeamListingPageWrapper.cs" />
