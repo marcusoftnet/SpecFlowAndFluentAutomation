@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Demo page for FluentAutomation - the title</title>
+
+    <script language="javascript">
+        function setSelected() {
+            var e = document.getElementById("selectBox1");
+            var strSelectedText = e.options[e.selectedIndex].text;
+
+            var textBox = document.getElementById("txtSelectedOptionValue");
+            textBox.value = strSelectedText;
+        }
+    </script>
+</head>
+<body>
+    <h1>Demo page for FluentAutomation selectors</h1>
+    <p>All selectors are in CSS Selector syntax which you can brush up on <a href="http://www.w3.org/TR/CSS2/selector.html">here</a></p>
+
+    <hr />
+    <div id="divById">Div by id</div>
+    <br />
+    <a href="http://www.marcusoft.net" class="aClassForThisLink">Marcusoft.Net - the coolest site on the net</a>
+    
+
+    <form action="/" method="post" id="demoForm">
+        <label for="DemoTextbox">DemoTextbox</label>:<input type="text" id="DemoTextbox" name="DemoTextbox" /><br />
+        <label for="DemoTextboxByClass">DemoTextboxByClass</label>:<input type="text" class="aSpecialClassNameForThisTextBox" id="theId" name="theName" /><br />
+        <label for="SelectBox">Selectbox</label>
+        <select id="selectBox1" onchange="javascript: setSelected();">
+            <option id="id1">Value 1</option>
+            <option id="id2">Value 2 - the special one</option>
+            <option id="id3">Value 3</option>
+            <option id="id4">Value 4</option>
+        </select>
+        <br />
+        <input type="text" id="txtSelectedOptionValue" />
+        <input type="button" id="TestButton" name="TestButton" value="Test button" />
+    </form>
+</body>
+</html>
