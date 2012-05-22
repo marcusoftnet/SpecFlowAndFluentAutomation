@@ -39,6 +39,7 @@ namespace Specs
         {
             I.Click("a.aClassForThisLink");
             I.Expect.Url("http://www.marcusoft.net");
+
         }
 
         [Test]
@@ -58,7 +59,7 @@ namespace Specs
         public void should_select_second_option_in_selectbox()
         {
             // Select the second option in the select list
-            I.Select(1).From("#selectBox1");
+            I.Select(1).From("select#selectBox1");
 
             // Check that the value has been set in the textbox
             // according to the script on the page
@@ -95,6 +96,13 @@ namespace Specs
             I.Click("input#TestButton");
             I.Click("#TestButton");
             I.Click("input[type='button'][id='TestButton']");
+        }
+
+        [Test]
+        public void should_find_element_by_AutomationID()
+        {
+            I.Enter("Lite text. Lite text lite text.").Quickly.In("input[data-automationid='EnTextArea']");
+            I.Click("input[data-automationid='Håkan']");
         }
 
     }

@@ -1,5 +1,5 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+﻿<!doctype html>
+<html>
 <head>
     <title>Demo page for FluentAutomation - the title</title>
 
@@ -25,8 +25,8 @@
 
     <form action="/" method="post" id="demoForm">
         <label for="DemoTextbox">DemoTextbox</label>:<input type="text" id="DemoTextbox" name="DemoTextbox" /><br />
-        <label for="DemoTextboxByClass">DemoTextboxByClass</label>:<input type="text" class="aSpecialClassNameForThisTextBox" id="theId" name="theName" /><br />
-        <label for="SelectBox">Selectbox</label>
+        <label for="DemoTextboxByClass">DemoTextboxByClass</label>:<input type="text" class="aSpecialClassNameForThisTextBox" id="DemoTextboxByClass" name="DemoTextboxByClass" /><br />
+        <label for="selectBox1">Selectbox</label>
         <select id="selectBox1" onchange="javascript: setSelected();">
             <option id="id1">Value 1</option>
             <option id="id2">Value 2 - the special one</option>
@@ -35,7 +35,9 @@
         </select>
         <br />
         <input type="text" id="txtSelectedOptionValue" />
-        <input type="button" id="TestButton" name="TestButton" value="Test button" />
+        <input type="button" id="TestButton" name="TestButton" value="Test button" data-automationid="Håkan" />
+        <br />
+        <input type="text" data-automationid="EnTextArea" />
     </form>
 </body>
 </html>
